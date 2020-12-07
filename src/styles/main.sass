@@ -1,0 +1,29 @@
+@import "variables"
+@import "fonts"
+
+@import "components/container"
+@import "components/weather"
+@import "components/app-error"
+
+
+*
+   margin: 0
+   padding: 0
+   box-sizing: border-box
+
+body
+   font-family: 'Roboto', sans-serif
+
+.App
+   min-height: 100vh
+   display: flex
+
+.background
+   position: fixed
+   top: 0
+   left: 0
+   right: 0
+   bottom: 0
+   background: rgb(74,74,74)
+   background: linear-gradient(180deg, rgba(74,74,74,1) 0%, rgba(22,22,22,1) 88%)
+   z-index: -900

@@ -1,0 +1,147 @@
+.Weather__header
+   display: flex
+   justify-content: space-between
+   padding: 15px
+   background-color: white
+
+   .header_date
+      display: flex
+      flex-wrap: wrap
+      align-items: flex-end
+      color: orange
+      padding: 5px 10px
+      font-weight: bold
+
+   .header_day-of-week
+      font-size: 2em
+      color: dodgerblue
+      margin-right: 10px
+
+   .header_date-string
+      white-space: nowrap
+      font-size: 1.7em
+
+   .header_expected
+      font-size: 20px
+      margin-bottom: 10px
+      padding: 10px 10px
+
+   .header_location
+      display: flex
+      align-items: flex-end
+      font-size: 1.2em
+      font-weight: bold
+      color: dodgerblue
+      margin-left: 10px
+      margin-bottom: 5px
+      cursor: pointer
+
+   .header_city
+      margin-left: 10px
+
+   .first-section,
+   .second-section
+      display: flex
+      flex-direction: column
+      justify-content: space-between
+      min-width: 30%
+
+   .first-section
+      flex-grow: 1
+
+   .second-section
+      align-items: center
+
+   .header_temperature
+      width: 128px
+      display: flex
+      justify-content: center
+      align-content: flex-start
+      font-weight: bold
+      font-size: 3em
+      sup
+         position: static
+         line-height: normal
+         font-size: 0.5em
+
+.Weather__search-city
+   position: relative
+   padding: 50px
+   background-color: white
+   .search_options-list
+      position: absolute
+      left: 50px
+      right: 50px
+      top: 80%
+      padding: 10px 0
+      border: 2px solid orange
+      background-color: white
+
+   .search-item
+      display: block
+      padding: 10px
+      background-color: white
+      cursor: pointer
+      &:hover
+         background-color: silver
+         font-weight: bold
+
+
+.Weather__info
+   display: flex
+   flex-direction: column
+   justify-content: space-between
+   padding: 20px 0
+   color: white
+   font-size: 21px
+   background: rgb(88,166,255)
+   background: linear-gradient(-90deg, rgb(131, 182, 255) 0%, rgba(0,90,212,1) 100%)
+   .info-item
+      display: flex
+      align-items: center
+      padding: 5px 20px
+      flex-grow: 1
+
+   .info_value
+      font-size: 1.8em
+      font-weight: bold
+
+   .info_title
+      width: 30%
+      text-transform: uppercase
+
+.Weather__other-days
+   display: flex
+   background-color: #282C34
+   padding: 60px 40px 40px
+
+   .other-days_item
+      position: relative
+      text-align: center
+      padding: 15px 5px
+      overflow: hidden
+      width: 100px
+      cursor: pointer
+      flex-grow: 1
+      font-size: 18px
+      background-color: white
+      border: 2px solid silver
+      filter: grayscale(1)
+      color: dodgerblue
+      transition: filter .22s, border-color .22s
+      img
+         width: 50%
+      &:hover
+         border-color: dodgerblue
+         filter: grayscale(0.25)
+
+   .other-days_item.active
+      margin: 0 5px
+      top: -20px
+      filter: none
+      box-shadow: 0 0 10px 5px #56a9ff
+      border-color: dodgerblue
+
+   .item_temperature
+      margin-top: 15px
+      font-weight: bold
