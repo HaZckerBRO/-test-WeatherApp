@@ -40,13 +40,6 @@ module.exports = (env = {}) => {
   return {
     mode: isProd ? 'production' : isDev && 'development',
 
-    entry: {
-      bundle: [
-        "webpack/hot/dev-server",
-        (`${__dirname}/src/index.js`)
-      ]
-    },
-
     output: {
       path: path.resolve(process.cwd(), 'dist'),
     },
@@ -118,6 +111,7 @@ module.exports = (env = {}) => {
     },
 
     devServer: {
+      overlay: true,
       open: true,
       hot: true,
     }
